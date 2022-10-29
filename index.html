@@ -17,60 +17,70 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="./css/styles.css"
     />
   </head>
   <body>
     <!--Шапка сайту -->
-    <header>
-      <nav>
-        <a
-          href="/"
-          lang="en"
-          class="logo"
-          >Web<span class="logo-black">Studio</span></a
-        >
+    <header class="header">
+      <div class="container main-nav">
+        <nav class="main-nav">
+          <a
+            href="/"
+            lang="en"
+            class="logo"
+            >Web<span class="logo-black">Studio</span></a
+          >
 
-        <ul class="site-nav list">
-          <li>
+          <ul class="site-nav list">
+            <li class="item">
+              <a
+                href=""
+                class="link current"
+                >Студія</a
+              >
+            </li>
+            <li class="item">
+              <a
+                href="./portfolio.html"
+                class="link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="item">
+              <a
+                href=""
+                class="link"
+                >Контакти</a
+              >
+            </li>
+          </ul>
+        </nav>
+        
+        <ul class="auth-nav site-nav list">
+          <li class="item">
             <a
-              href=""
-              class="link current"
-              >Студія</a
+              href="mailto:info@devstudio.com"
+              class="contact"
+              >info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="item">
             <a
-              href="./portfolio.html"
-              class="link"
-              >Портфоліо</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="link"
-              >Контакти</a
+              href="tel:+380961111111"
+              class="contact"
+              >+38 096 111 11 11</a
             >
           </li>
         </ul>
-      </nav>
-      <ul class="site-nav list">
-        <li>
-          <a
-            href="mailto:info@devstudio.com"
-            class="contact"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a
-            href="tel:+380961111111"
-            class="contact"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
+      </div>
     </header>
 
     <main>
@@ -88,30 +98,31 @@
 
       <!-- Переваги -->
       <section class="section">
-        <h2 class="visually-hidden">Особливості</h2>
+        <div class="container">
+          <h2 class="visually-hidden">Особливості</h2>
 
         <ul class="features list">
-          <li>
+          <li class="item">
             <h3 class="title">Увага до деталей</h3>
             <p class="text">
               Ідейні міркування, і навіть початок повсякденної роботи з
               формування позиції.
             </p>
           </li>
-          <li>
+          <li class="item">
             <h3 class="title">Пунктуальність</h3>
             <p class="text">
               Завдання організації, особливо рамки і місце навчання кадрів тягне
               у себе.
             </p>
           </li>
-          <li>
+          <li class="item">
             <h3 class="title">Планування</h3>
             <p class="text">
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
-          <li>
+          <li class="item">
             <h3 class="title">Технології</h3>
             <p class="text">
               Значимість цих проблем настільки очевидна, що реалізація планових
@@ -119,28 +130,32 @@
             </p>
           </li>
         </ul>
-      </section>
+
+        </div>
+        
+      <!-- </section> -->
 
       <!-- Чим ми займаємося -->
-      <section class="section">
-        <h2 class="section-title">Чим ми займаємося</h2>
+      <!-- <section class="section"> -->
+        <div class="container">
+          <h2 class="section-title">Чим ми займаємося</h2>
 
-        <ul class="list">
-          <li>
+        <ul class="activities list">
+          <li class="item">
             <img
               src="./images/img1.jpg"
               alt="фото-1"
               width="370"
             />
           </li>
-          <li>
+          <li class="item">
             <img
               src="./images/img2.jpg"
               alt="фото-2"
               width="370"
             />
           </li>
-          <li>
+          <li class="item">
             <img
               src="./images/img3.jpg"
               alt="фото-3"
@@ -148,11 +163,13 @@
             />
           </li>
         </ul>
+        </div>
       </section>
 
       <!-- Команда -->
       <section class="section background">
-        <h2 class="section-title">Наша команда</h2>
+        <div class="container">
+          <h2 class="section-title">Наша команда</h2>
 
         <ul class="team">
           <li class="background">
@@ -212,12 +229,14 @@
             </p>
           </li>
         </ul>
+        </div>
       </section>
     </main>
 
     <!-- Футер -->
     <footer class="footer">
-      <a
+      <div class="container">
+        <a
         href="/"
         lang="en"
         class="logo"
@@ -252,6 +271,7 @@
           </li>
         </ul>
       </address>
+      </div>
     </footer>
   </body>
 </html>

@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
       href="./css/styles.css"
@@ -22,63 +23,68 @@
   </head>
   <body>
     <!--Шапка сайту -->
-    <header>
-      <nav>
-        <a
-          href="/"
-          lang="en"
-          class="logo"
-          >Web<span class="logo-black">Studio</span></a
-        >
+    <header class="header">
+      <div class="container main-nav">
+        <nav class="main-nav">
+          <a
+            href="/"
+            lang="en"
+            class="logo"
+            >Web<span class="logo-black">Studio</span></a
+          >
 
-        <ul class="site-nav list">
-          <li>
+          <ul class="site-nav list">
+            <li class="item">
+              <a
+                href="./index.html"
+                class="link"
+                >Студія</a
+              >
+            </li>
+            <li  class="item">
+              <a
+                href=""
+                class="link current"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="item">
+              <a
+                href=""
+                class="link"
+                >Контакти</a
+              >
+            </li>
+          </ul>
+        </nav>
+        
+        <ul class="auth-nav site-nav list">
+          <li class="item">
             <a
-              href="./index.html"
-              class="link"
-              >Студія</a
+              href="mailto:info@devstudio.com"
+              class="contact"
+              >info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="item">
             <a
-              href=""
-              class="link current"
-              >Портфоліо</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="link"
-              >Контакти</a
+              href="tel:+380961111111"
+              class="contact"
+              >+38 096 111 11 11</a
             >
           </li>
         </ul>
-      </nav>
-      <ul class="site-nav list">
-        <li>
-          <a
-            href="mailto:info@devstudio.com"
-            class="contact"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a
-            href="tel:+380961111111"
-            class="contact"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
+      </div>
     </header>
 
+   
     <main>
-      <section>
+      <div class="container">
+        <section class="section">
         <h1 class="visually-hidden">Наші проекти</h1>
         <!-- Фільтр -->
-        <ul class="list">
-          <li>
+        <ul class="filter list">
+          <li item>
             <button
               class="button"
               type="button"
@@ -86,7 +92,7 @@
               Усі
             </button>
           </li>
-          <li>
+          <li item>
             <button
               class="button"
               type="button"
@@ -94,7 +100,7 @@
               Веб-сайти
             </button>
           </li>
-          <li>
+          <li item>
             <button
               class="button"
               type="button"
@@ -102,7 +108,7 @@
               Додатки
             </button>
           </li>
-          <li>
+          <li item>
             <button
               class="button"
               type="button"
@@ -110,7 +116,7 @@
               Дизайн
             </button>
           </li>
-          <li>
+          <li item>
             <button
               class="button"
               type="button"
@@ -123,7 +129,7 @@
         <!-- Портфоліо -->
 
         <ul class="projects list">
-          <li>
+          <li flex-element>
             <a
               href=""
               class="project"
@@ -137,7 +143,7 @@
               <p class="text">Веб-сайт</p>
             </a>
           </li>
-          <li>
+          <li flex-element>
             <a
               href=""
               class="project"
@@ -151,7 +157,7 @@
               <p class="text">Дизайн</p>
             </a>
           </li>
-          <li>
+          <li flex-element>
             <a
               href=""
               class="project"
@@ -165,7 +171,7 @@
               <p class="text">Додаток</p>
             </a>
           </li>
-          <li>
+          <li flex-element>
             <a
               href=""
               class="project"
@@ -179,7 +185,7 @@
               <p class="text">Маркетинг</p>
             </a>
           </li>
-          <li>
+          <li flex-element>
             <a
               href=""
               class="project"
@@ -193,7 +199,7 @@
               <p class="text">Додаток</p>
             </a>
           </li>
-          <li>
+          <li flex-element>
             <a
               href=""
               class="project"
@@ -212,7 +218,7 @@
               <p class="text">Веб-сайт</p>
             </a>
           </li>
-          <li>
+          <li flex-element>
             <a
               href=""
               class="project"
@@ -226,7 +232,7 @@
               <p class="text">Дизайн</p>
             </a>
           </li>
-          <li>
+          <li flex-element>
             <a
               href=""
               class="project"
@@ -240,7 +246,7 @@
               <p class="text">Маркетинг</p>
             </a>
           </li>
-          <li>
+          <li flex-element>
             <a
               href=""
               class="project"
@@ -261,11 +267,13 @@
           </li>
         </ul>
       </section>
+      </div>
     </main>
 
     <!-- Футер -->
     <footer class="footer">
-      <a
+      <div class="container">
+        <a
         href="/"
         lang="en"
         class="logo"
@@ -300,6 +308,7 @@
           </li>
         </ul>
       </address>
+      </div>
     </footer>
   </body>
 </html>
