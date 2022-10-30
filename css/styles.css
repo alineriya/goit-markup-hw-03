@@ -268,7 +268,7 @@ h1, h2, h3,h4, h5, h6, p, ul {
 .team {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: var(--indent);
 }
   
 .team .background {
@@ -359,8 +359,12 @@ h1, h2, h3,h4, h5, h6, p, ul {
   padding-bottom: 50px;
 }
 
-.filter .item + .item {
+/* .filter .item + .item {
   margin-left: 8px;
+} */
+
+.filter .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .button {
@@ -394,18 +398,10 @@ h1, h2, h3,h4, h5, h6, p, ul {
 }
 
 .element {
-  /* margin-right: 30px;
-  margin-bottom: 30px; */
-  flex-basis: calc((100%-var(--indent)*(var(--items)-1))/var(--items))
+  /* flex-basis: calc((100%-var(--indent)*(var(--items)-1))/var(--items)); */
+  /* background-color: teal; */
 }
 
-/* .element:ntn-child(3n) {
-  margin-right: 0;
-}
-
-.element: ntn-last-child (-n + 3) {
-  margin-bottom: 0;
-} */
 
 .project {
   text-decoration: none;
