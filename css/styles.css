@@ -71,12 +71,17 @@ h1, h2, h3,h4, h5, h6, p, ul {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
-/* Page header */
+/* ---Header--- */
 
-.border {
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header {
   border-bottom: 1px;
   border-style: solid;
   border-color: var(--header-border);
@@ -84,8 +89,8 @@ h1, h2, h3,h4, h5, h6, p, ul {
 
 /* Logo */
 .logo {
-  display: flex;
   margin-right: 93px;
+  
   color: var(--accent-color);
   text-decoration: none;
   font-family: Raleway, sans-serif;
@@ -98,33 +103,25 @@ h1, h2, h3,h4, h5, h6, p, ul {
   color: var(--black-logo);
 }
 
+/* Header nav */
 
-
-/* Site nav */
-
-.site-nav {
-   display: flex;
+.header-nav {
+  margin-right: auto;
 }
 
-/* .site-nav .item {
-  margin-right: 50px;
-  background-color: tomato;
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
-.site-nav .item:last-child {
-  margin-right: 0;
-} */
-
-/* .site-nav .item:not(:last-child) {
-  margin-right: 50px;
-} */
-
-.site-nav .item + .item {
-  margin-left: 50px;
+.contacts {
+  display: flex;
+  gap: 50px;
 }
 
-.site-nav .link,
-.site-nav .contact {
+.header-list .link,
+.contacts .contact {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -135,36 +132,25 @@ h1, h2, h3,h4, h5, h6, p, ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  
 }
 
-.site-nav .contact {
+.contacts .contact {
   color: var(--primary-text-color)
 }
 
-.site-nav .link.current {
+.header-list .link.current {
   color: var(--accent-color);
   text-decoration: none;
 }
 
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .contact:hover,
-.site-nav .contact:focus {
+.header-list .link:hover,
+.header-list .link:focus,
+.contacts .contact:hover,
+.contacts .contact:focus {
   color: var(--accent-color);
 }
 
-/* Main nav */
-
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-.auth-nav {
-  margin-left: auto;;
-}
 
 /* Hero */
 .hero {
@@ -181,6 +167,22 @@ h1, h2, h3,h4, h5, h6, p, ul {
   text-transform: uppercase;
   padding-bottom: 30px;
  }
+
+.button.primary {
+  display: block;
+  margin: 0 auto;
+
+  color: var(--primary-bgc);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding: 10px 32px;
+  min-width: 216px;
+}
+
 
 /* Section titles */
 
@@ -229,8 +231,8 @@ h1, h2, h3,h4, h5, h6, p, ul {
   /* flex-basis: calc((100%-var(--indent)*(var(--items)-1))/var(--items)); */
 }
 
-.features .item + .item {
-  margin-left: 30px;
+.features .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .features .title {
@@ -295,7 +297,7 @@ h1, h2, h3,h4, h5, h6, p, ul {
 }
 
 
-/* Footer */
+/* ---Footer--- */
 .footer {
   background-color: var(--footer-bgc);
   padding-top: 60px;
@@ -314,8 +316,8 @@ h1, h2, h3,h4, h5, h6, p, ul {
 
 
 
-.contacts .address,
-.contacts .link {
+.footer-contacts .address,
+.footer-contacts .link {
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
@@ -324,19 +326,21 @@ h1, h2, h3,h4, h5, h6, p, ul {
   display: inline-block;
 }
 
-.contacts .address {
+.footer-contacts .address {
   color: var(--primary-bgc);
   padding-top: 20px;
  
 }
 
-.contacts .link {
+.footer-contacts .link {
   color: var(--footer-contacts-color);
   padding-top: 9px;
 }
 
-.contacts .link:hover,
-.contacts .link:focus {
+.footer-contacts .address:hover,
+.footer-contacts .address:focus,
+.footer-contacts .link:hover,
+.footer-contacts .link:focus {
   color: var(--accent-color);
 }
 
@@ -349,10 +353,6 @@ h1, h2, h3,h4, h5, h6, p, ul {
   justify-content: center;
   padding-bottom: 50px;
 }
-
-/* .filter .item {
-  display: block;
-} */
 
 .filter .item + .item {
   margin-left: 8px;
@@ -373,20 +373,6 @@ h1, h2, h3,h4, h5, h6, p, ul {
   padding: 6px 22px;
   }
 
-.button.primary {
-  color: var(--primary-bgc);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  padding: 10px 32px;
-  min-width: 216px;
-  
-}
 
 
 .button:hover,
