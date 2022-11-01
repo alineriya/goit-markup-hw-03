@@ -51,11 +51,11 @@ h1, h2, h3,h4, h5, h6, p, ul {
 
 }
 
-/* img {
+img {
   display: block;
   max-width: 100%;
-  height:auto;
-} */
+  height: auto;
+}
 
 
 .list {
@@ -83,10 +83,8 @@ h1, h2, h3,h4, h5, h6, p, ul {
 }
 
 .header {
-  border-bottom: 1px;
-  border-style: solid;
-  border-color: var(--header-border);
-}
+  border-bottom: 1px solid var(--header-border);
+ }
 
 /* Logo */
 .logo {
@@ -156,9 +154,13 @@ h1, h2, h3,h4, h5, h6, p, ul {
 /* Hero */
 .hero {
   background-color: var(--footer-bgc);
+  padding: 200px 0;
   }
 
 .hero-title {
+  width: 696px;
+  margin: 0 auto 30px;
+  
   color: var(--primary-bgc);
   font-weight: 900;
   font-size: 44px;
@@ -166,12 +168,12 @@ h1, h2, h3,h4, h5, h6, p, ul {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-bottom: 30px;
  }
 
 .button.primary {
   display: block;
   margin: 0 auto;
+  
 
   color: var(--primary-bgc);
   background-color: var(--accent-color);
@@ -197,7 +199,7 @@ h1, h2, h3,h4, h5, h6, p, ul {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .visually-hidden {
@@ -241,7 +243,7 @@ h1, h2, h3,h4, h5, h6, p, ul {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .features .text {
@@ -252,11 +254,13 @@ h1, h2, h3,h4, h5, h6, p, ul {
 /* Activities */
 .activities {
   display: flex;
+  gap: var(--indent);
 }
 
-.activities .item + .item {
+
+/* .activities .item + .item {
   margin-left: 30px;
-}
+} */
 
 /* Team */
 .team-section {
@@ -286,7 +290,7 @@ h1, h2, h3,h4, h5, h6, p, ul {
 
 .team .title {
   /* padding-top: 30px; */
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   color:var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -319,6 +323,9 @@ h1, h2, h3,h4, h5, h6, p, ul {
   color: var(--primary-bgc);
 }
 
+.footer-contacts:not(:last-child)  {
+  margin-bottom: 9px;
+}
 
 
 .footer-contacts .address,
@@ -333,14 +340,13 @@ h1, h2, h3,h4, h5, h6, p, ul {
 
 .footer-contacts .address {
   color: var(--primary-bgc);
-  padding-top: 20px;
- 
+  margin-top: 20px;
 }
 
 .footer-contacts .link {
   color: var(--footer-contacts-color);
-  padding-top: 9px;
-}
+ }
+
 
 .footer-contacts .address:hover,
 .footer-contacts .address:focus,
@@ -354,9 +360,10 @@ h1, h2, h3,h4, h5, h6, p, ul {
 /* Portfolio */
 
 .filter {
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
+
 }
 
 /* .filter .item + .item {
@@ -415,6 +422,7 @@ h1, h2, h3,h4, h5, h6, p, ul {
 
 .project .title {
   /* padding: 20px 24px 4px; */
+  margin-bottom: 4px;
 
   color: var(--title-text-color);
   font-size: 18px;
